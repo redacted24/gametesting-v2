@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnsrsv7t3txq1"]
+
+[ext_resource type="PackedScene" uid="uid://br3860se46788" path="res://player.tscn" id="1_m1l6x"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rkr8h"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_intyh"]
+size = Vector3(20, 1, 20)
+
+[node name="Main" type="Node"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 0.115796, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_rkr8h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(0.985307, 0, 0, 0, 0.109893, 0, 0, 0, 0.985307, 0, 0, 0)
+shape = SubResource("BoxShape3D_intyh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.153158, 0.229332, -0.961223, -8.15675e-09, 0.972699, 0.23207, 0.988202, 0.0355435, -0.148977, 0, 11.1049, 14.6405)
+light_energy = 2.371
+
+[node name="Player" parent="." instance=ExtResource("1_m1l6x")]
+speed = 14
+fall_acceleration = 75
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-3.09086e-08, -0.707107, 0.707107, -3.09086e-08, 0.707107, 0.707107, -1, 0, -4.37114e-08, 8.18601, 7, 0)

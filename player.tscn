@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://br3860se46788"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_baiah"]
+[ext_resource type="PackedScene" uid="uid://c65r5lh4qvhy5" path="res://art/derp.glb" id="2_7iiwv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s21xt"]
+size = Vector3(1, 0.995178, 1)
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 4
+script = ExtResource("1_baiah")
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="derp" parent="Pivot" instance=ExtResource("2_7iiwv")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -0.000127465, 0.522583, -0.00117952)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000360817, 0.525543, 0.00284874)
+shape = SubResource("BoxShape3D_s21xt")
