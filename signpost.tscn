@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dilm1eci453o6"]
+
+[ext_resource type="PackedScene" uid="uid://djb4xoxybjtwf" path="res://art/signpost.glb" id="1_kgxh3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_moix5"]
+size = Vector3(0.412842, 2.99664, 0.4104)
+
+[node name="Signpost" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="signpost" parent="Node3D" instance=ExtResource("1_kgxh3")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012207, 1.44156, 0.000610352)
+shape = SubResource("BoxShape3D_moix5")

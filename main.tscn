@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnsrsv7t3txq1"]
+[gd_scene load_steps=8 format=3 uid="uid://dnsrsv7t3txq1"]
 
 [ext_resource type="PackedScene" uid="uid://br3860se46788" path="res://player.tscn" id="1_m1l6x"]
 [ext_resource type="PackedScene" uid="uid://c10i7bs4ped0c" path="res://art/world.glb" id="1_oibnm"]
 [ext_resource type="PackedScene" uid="uid://dq1xkgdl3sr0x" path="res://sign.tscn" id="3_erk7h"]
+[ext_resource type="PackedScene" uid="uid://dilm1eci453o6" path="res://signpost.tscn" id="4_tn076"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_intyh"]
 size = Vector3(20, 1, 20.0264)
@@ -56,3 +57,6 @@ shape = SubResource("BoxShape3D_vc263")
 
 [node name="Sign" parent="." instance=ExtResource("3_erk7h")]
 transform = Transform3D(-0.460448, 0, 0.887687, 0, 1, 0, -0.887687, 0, -0.460448, 17.3496, -0.29788, -5.39901)
+
+[node name="Signpost" parent="Sign" instance=ExtResource("4_tn076")]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0.328538, 9.53674e-07, 2.2989)
