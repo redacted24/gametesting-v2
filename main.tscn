@@ -1,62 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnsrsv7t3txq1"]
+[gd_scene load_steps=2 format=3 uid="uid://dnsrsv7t3txq1"]
 
-[ext_resource type="PackedScene" uid="uid://br3860se46788" path="res://player.tscn" id="1_m1l6x"]
-[ext_resource type="PackedScene" uid="uid://c10i7bs4ped0c" path="res://art/world.glb" id="1_oibnm"]
-[ext_resource type="PackedScene" uid="uid://dq1xkgdl3sr0x" path="res://sign.tscn" id="3_erk7h"]
-[ext_resource type="PackedScene" uid="uid://dilm1eci453o6" path="res://signpost.tscn" id="4_tn076"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_intyh"]
-size = Vector3(20, 1, 20.0264)
-
-[sub_resource type="BoxMesh" id="BoxMesh_7bffp"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_vc263"]
+[ext_resource type="PackedScene" uid="uid://blb124skrwrcw" path="res://Levels/level_1.tscn" id="1_i1equ"]
 
 [node name="Main" type="Node"]
 
-[node name="Ground" type="StaticBody3D" parent="."]
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="world" parent="Ground" instance=ExtResource("1_oibnm")]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
-transform = Transform3D(2.52028, 0, 0, 0, 0.109893, 0, 0, 0, 2.50311, 0, 0, -0.0338875)
-shape = SubResource("BoxShape3D_intyh")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.117487, 0.799936, -0.588472, 0.0982554, 0.599032, 0.794674, 0.988202, 0.0355434, -0.148977, -0.201561, 11.1049, 14.6405)
-light_energy = 1.022
-shadow_enabled = true
-directional_shadow_max_distance = 109.0
-
-[node name="Player" parent="." instance=ExtResource("1_m1l6x")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, 0, 0)
-collision_mask = 3
-metadata/_edit_group_ = true
-
-[node name="CameraPivot" type="Node3D" parent="Player"]
-transform = Transform3D(-8.9407e-08, 0, 1, 0, 1, 0, -1, 0, -8.9407e-08, 2.00972e-14, 0.817537, 2.00972e-14)
-
-[node name="Camera3D" type="Camera3D" parent="Player/CameraPivot"]
-transform = Transform3D(1, 0, 0, 5.73682e-15, 0.62625, 0.779622, 0, -0.779622, 0.62625, -2.00972e-14, 10.9581, 10.2829)
-current = true
-fov = 43.0
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3945, 0.840661, 0)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-mesh = SubResource("BoxMesh_7bffp")
-skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_vc263")
-
-[node name="Sign" parent="." instance=ExtResource("3_erk7h")]
-transform = Transform3D(-0.460448, 0, 0.887687, 0, 1, 0, -0.887687, 0, -0.460448, 17.3496, -0.29788, -5.39901)
-
-[node name="Signpost" parent="Sign" instance=ExtResource("4_tn076")]
-transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 0.328538, 9.53674e-07, 2.2989)
+[node name="Level1" parent="." instance=ExtResource("1_i1equ")]

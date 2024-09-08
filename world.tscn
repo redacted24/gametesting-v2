@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d06f1xxdro1sc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngvfc"]
+size = Vector3(96.0689, 0.064209, 95.6868)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3poxa"]
+
+[node name="world" type="StaticBody3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0935745, -0.0299072, 0.0976791)
+shape = SubResource("BoxShape3D_ngvfc")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_3poxa")

@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g7myh8cw4hsf"
-path="res://.godot/imported/sign_PixelTextureGrid_64.png-2a5b90a91293e9162c3b0edd908e7241.ctex"
+uid="uid://cbmbobmy3tqht"
+path="res://.godot/imported/world_blocks_PixelTextureGrid_32_3.png-bc8f35b09a8e260b2a71d5d0b108dd70.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "fe4524aada4643a4e5f05f3b0e59ede1"
+"md5": "af96ccce336da8edd32e406d6722668e"
 }
 
 [deps]
 
-source_file="res://art/sign_PixelTextureGrid_64.png"
-dest_files=["res://.godot/imported/sign_PixelTextureGrid_64.png-2a5b90a91293e9162c3b0edd908e7241.ctex"]
+source_file="res://models/world_blocks_PixelTextureGrid_32_3.png"
+dest_files=["res://.godot/imported/world_blocks_PixelTextureGrid_32_3.png-bc8f35b09a8e260b2a71d5d0b108dd70.ctex"]
 
 [params]
 
