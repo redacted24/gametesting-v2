@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://blb124skrwrcw"]
+[gd_scene load_steps=5 format=3 uid="uid://blb124skrwrcw"]
 
 [ext_resource type="PackedScene" uid="uid://br3860se46788" path="res://player.tscn" id="2_vpmv0"]
 [ext_resource type="Environment" uid="uid://cebq666lr0qkj" path="res://Resources/level_1_sky.tres" id="3_qi5k3"]
 [ext_resource type="MeshLibrary" uid="uid://bv1lu5vf5rtuv" path="res://mesh library/world_blocks.tres" id="4_cpqpf"]
+[ext_resource type="PackedScene" uid="uid://deg05rtaot18i" path="res://gem.tscn" id="4_k18wi"]
 
 [node name="Level1" type="Node3D"]
 
@@ -28,3 +29,7 @@ fall_acceleration = 120
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("3_qi5k3")
+
+[node name="gem" parent="." instance=ExtResource("4_k18wi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.50811, 0.379875, -0.498045)
+monitorable = true

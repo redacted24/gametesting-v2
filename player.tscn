@@ -112,6 +112,7 @@ size = Vector3(0.529053, 0.528931, 0.530487)
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_baiah")
 speed = 7
 metadata/_edit_group_ = true

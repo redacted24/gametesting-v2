@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://deg05rtaot18i"]
+
+[ext_resource type="Script" path="res://gem.gd" id="1_j22q2"]
+[ext_resource type="PackedScene" uid="uid://dlw6foc5qmadq" path="res://models/gem.glb" id="1_sf0di"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lseeu"]
+data = PackedVector3Array(0.2, 0, -0.2, 0, -0.32, 0, 0.2, 0, 0.2, 0.2, 0, 0.2, 0, -0.32, 0, -0.2, 0, 0.2, -0.2, 0, 0.2, 0, -0.32, 0, -0.2, 0, -0.2, -0.2, 0, -0.2, 0, -0.32, 0, 0.2, 0, -0.2, 0, 0.32, 0, -0.2, 0, -0.2, 0.2, 0, -0.2, 0, 0.32, 0, -0.2, 0, 0.2, -0.2, 0, -0.2, 0, 0.32, 0, 0.2, 0, 0.2, -0.2, 0, 0.2, 0, 0.32, 0, 0.2, 0, -0.2, 0.2, 0, 0.2)
+
+[node name="gem" type="Area3D"]
+collision_layer = 2
+collision_mask = 4
+monitorable = false
+script = ExtResource("1_j22q2")
+
+[node name="gem2" parent="." instance=ExtResource("1_sf0di")]
+
+[node name="gem" parent="gem2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.325488, 0)
+layers = 2
+
+[node name="CollisionShape3D" parent="gem2/gem/gem" index="0"]
+visible = false
+disabled = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.325488, 0)
+shape = SubResource("ConcavePolygonShape3D_lseeu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+
+[editable path="gem2"]
