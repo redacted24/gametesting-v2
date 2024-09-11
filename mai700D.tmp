@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnsrsv7t3txq1"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_hi0st"]
+[ext_resource type="PackedScene" uid="uid://blb124skrwrcw" path="res://Levels/level_1.tscn" id="1_i1equ"]
+[ext_resource type="Script" path="res://label.gd" id="2_r5my0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_imb66"]
+font_size = 34
+
+[node name="Main" type="Node"]
+script = ExtResource("1_hi0st")
+
+[node name="Level1" parent="." instance=ExtResource("1_i1equ")]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 25.0
+offset_right = 156.0
+offset_bottom = 48.0
+text = "Gems: 0"
+label_settings = SubResource("LabelSettings_imb66")
+script = ExtResource("2_r5my0")
