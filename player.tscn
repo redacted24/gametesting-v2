@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://br3860se46788"]
+[gd_scene load_steps=13 format=4 uid="uid://br3860se46788"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_baiah"]
 [ext_resource type="Texture2D" uid="uid://qw861f154yv4" path="res://models/player_PixelTextureGrid_64.png" id="2_y62t0"]
@@ -109,6 +109,17 @@ shadow_mesh = SubResource("ArrayMesh_wuy6s")
 [sub_resource type="BoxShape3D" id="BoxShape3D_67st0"]
 size = Vector3(0.529053, 0.528931, 0.530487)
 
+[sub_resource type="Animation" id="Animation_kj2jb"]
+resource_name = "idle"
+length = 3.0
+loop_mode = 1
+step = 0.1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhjn5"]
+_data = {
+"idle": SubResource("Animation_kj2jb")
+}
+
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 collision_layer = 4
@@ -151,3 +162,8 @@ transform = Transform3D(1, 0, 0, 0, 0.894451, 0.447166, 0, -0.447166, 0.894451, 
 
 [node name="Camera3D" type="Camera3D" parent="CameraControl/CameraTarget"]
 fov = 63.2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qhjn5")
+}
