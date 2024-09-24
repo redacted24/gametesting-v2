@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://br3860se46788"]
+[gd_scene load_steps=12 format=4 uid="uid://k3x8pen1p8eb"]
 
-[ext_resource type="Texture2D" uid="uid://cadi85ut6opmw" path="res://models/player_animated_PixelTextureGrid_64.png" id="1_firsv"]
+[ext_resource type="Texture2D" uid="uid://cadi85ut6opmw" path="res://models/player_animated_PixelTextureGrid_64.png" id="1_ryblp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wq3go"]
 resource_name = "m_player"
 cull_mode = 2
-albedo_texture = ExtResource("1_firsv")
+albedo_texture = ExtResource("1_ryblp")
 roughness = 0.5
 texture_filter = 2
 
@@ -196,27 +196,29 @@ bones/0/name = "body2"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 bones/0/enabled = true
-bones/0/position = Vector3(0, 0, 0)
-bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/position = Vector3(0, 0.0720749, 0)
+bones/0/rotation = Quaternion(-1.417e-17, -5.44842e-09, 0.0381331, 0.999273)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "arm.l"
 bones/1/parent = 0
 bones/1/rest = Transform3D(-0.0128841, 5.01786e-07, 0.999917, 5.68434e-14, -1, 5.01827e-07, 0.999917, 6.46571e-09, 0.0128842, 0.635047, 0.740393, 9.78633e-08)
 bones/1/enabled = true
 bones/1/position = Vector3(0.635047, 0.740393, 9.78633e-08)
-bones/1/rotation = Quaternion(0.702537, 1.78562e-07, 0.711647, -1.76276e-07)
+bones/1/rotation = Quaternion(0.66727, -0.170332, 0.705262, -0.168354)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "arm.r"
 bones/2/parent = 0
 bones/2/rest = Transform3D(-0.0128841, -5.01786e-07, -0.999917, -5.68434e-14, -1, 5.01827e-07, -0.999917, 6.46571e-09, 0.0128842, -0.635047, 0.740393, 9.78633e-08)
 bones/2/enabled = true
 bones/2/position = Vector3(-0.635047, 0.740393, 9.78633e-08)
-bones/2/rotation = Quaternion(-0.702537, 1.78562e-07, 0.711647, 1.76276e-07)
+bones/2/rotation = Quaternion(-0.67589, 0.141806, 0.709517, -0.140177)
 bones/2/scale = Vector3(1, 1, 1)
 
 [node name="character" type="MeshInstance3D" parent="Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_h2faj")
 skin = SubResource("Skin_3nk1m")
+
+[node name="@StaticBody3D@23844" type="StaticBody3D" parent="Armature/Skeleton3D"]
 
 [node name="left_arm" type="MeshInstance3D" parent="Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_tvsnd")

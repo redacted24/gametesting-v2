@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qw861f154yv4"
-path="res://.godot/imported/player_PixelTextureGrid_64.png-092bd82d0341a74b7adac53734bfc471.ctex"
+uid="uid://cadi85ut6opmw"
+path="res://.godot/imported/player_animated_PixelTextureGrid_64.png-303f053c9c6f7ea97bc8bd345b2f91a1.ctex"
 metadata={
 "vram_texture": false
 }
@@ -13,8 +13,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://models/player_PixelTextureGrid_64.png"
-dest_files=["res://.godot/imported/player_PixelTextureGrid_64.png-092bd82d0341a74b7adac53734bfc471.ctex"]
+source_file="res://models/player_animated_PixelTextureGrid_64.png"
+dest_files=["res://.godot/imported/player_animated_PixelTextureGrid_64.png-303f053c9c6f7ea97bc8bd345b2f91a1.ctex"]
 
 [params]
 
