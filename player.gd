@@ -1,9 +1,12 @@
 extends CharacterBody3D
 
-@export var speed = 14
-@export var fall_acceleration = 75
-@export var jump_strength = 75
+const LERP_VAL = 0.25
 
+@onready var armature = $Armature
+@onready var anim_tree = $AnimationTree
+@export var speed = 6
+@export var fall_acceleration = 125
+@export var jump_strength = 75
 var target_velocity = Vector3.ZERO
 var jump_delay = 0.5 # seconds
 var jumping = false
@@ -31,9 +34,9 @@ func _physics_process(delta: float) -> void:
 		#jumping = false
 		#nb_jumps = 0
 		#
-	## First jump
-	#if is_on_floor() and Input.is_action_pressed('jump'):
-		#target_velocity.y = jump_strength
+	# First jump
+	if is_on_floor() and Input.is_action_pressed('jump'):
+		target_velocity.y = jump_strength
 		#nb_jumps += 1
 		#jumping = true
 
@@ -52,12 +55,15 @@ func _physics_process(delta: float) -> void:
 	# Set rotation
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
-		$Pivot.basis = Basis.looking_at(direction, Vector3.UP, true)
+		armature.rotation.y = lerp_angle(armature.rotation.y, atan2(velocity.x,velocity.z), LERP_VAL)
+		#armature.basis = Basis.looking_at(direction, Vector3.UP, true)
+
 		
 		# Ground velocity
-		target_velocity.x = direction.x * speed
-		target_velocity.z = direction.z * speed
-
+		target_velocity.x = lerp(target_velocity.x, direction.x * speed, 0.9)
+		target_velocity.z = lerp(target_velocity.z, direction.z * speed, 0.9)
+	anim_tree.set('parameters/BlendSpace1D/blend_position', velocity.length()/speed)
+	
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration*delta)
 	
