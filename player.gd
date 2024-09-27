@@ -4,6 +4,7 @@ const LERP_VAL = 0.25
 
 @onready var armature = $Armature
 @onready var anim_tree = $AnimationTree
+@onready var animation = $AnimationPlayer
 @export var speed = 6
 @export var fall_acceleration = 125
 @export var jump_strength = 75

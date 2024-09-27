@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://blb124skrwrcw"]
 
-[ext_resource type="PackedScene" uid="uid://br3860se46788" path="res://player.tscn" id="2_vpmv0"]
+[ext_resource type="PackedScene" uid="uid://cqerqruh3pq30" path="res://player.tscn" id="2_vpmv0"]
 [ext_resource type="Environment" uid="uid://cebq666lr0qkj" path="res://Resources/level_1_sky.tres" id="3_qi5k3"]
 [ext_resource type="MeshLibrary" uid="uid://bv1lu5vf5rtuv" path="res://mesh library/world_blocks.tres" id="4_cpqpf"]
 [ext_resource type="PackedScene" uid="uid://deg05rtaot18i" path="res://gem.tscn" id="4_k18wi"]
