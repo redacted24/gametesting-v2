@@ -112,6 +112,8 @@ size = Vector3(0.625, 4.83606, 0.532227)
 
 [node name="signpost" type="StaticBody3D"]
 transform = Transform3D(0.396697, 0, 0, 0, 0.396697, 0, 0, 0, 0.396697, 0, 0, 0)
+collision_layer = 2
+collision_mask = 0
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.6, 0, 0, 0, 2.6, 0, 0, 0, 2.6, 0, 0, 0)

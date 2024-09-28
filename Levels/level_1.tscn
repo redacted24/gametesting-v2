@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://blb124skrwrcw"]
+[gd_scene load_steps=7 format=3 uid="uid://blb124skrwrcw"]
 
 [ext_resource type="PackedScene" uid="uid://cqerqruh3pq30" path="res://player.tscn" id="2_vpmv0"]
 [ext_resource type="Environment" uid="uid://cebq666lr0qkj" path="res://Resources/level_1_sky.tres" id="3_qi5k3"]
 [ext_resource type="MeshLibrary" uid="uid://bv1lu5vf5rtuv" path="res://mesh library/world_blocks.tres" id="4_cpqpf"]
 [ext_resource type="PackedScene" uid="uid://deg05rtaot18i" path="res://gem.tscn" id="4_k18wi"]
 [ext_resource type="PackedScene" uid="uid://dilm1eci453o6" path="res://signpost.tscn" id="5_x7wnn"]
+[ext_resource type="PackedScene" uid="uid://cmetk3ru80q26" path="res://sign_2.tscn" id="6_s7dci"]
 
 [node name="Level1" type="Node3D"]
 
@@ -42,3 +43,6 @@ monitorable = true
 
 [node name="signpost" parent="." instance=ExtResource("5_x7wnn")]
 transform = Transform3D(-0.279482, 0, -0.281528, 0, 0.396697, 0, 0.281528, 0, -0.279482, 7.21392, 1.96031, -10.2333)
+
+[node name="sign2" parent="." instance=ExtResource("6_s7dci")]
+transform = Transform3D(0.2169, 0, 0.336087, 0, 0.4, 0, -0.336087, 0, 0.2169, 9.69543, 1.86549, -11.738)
